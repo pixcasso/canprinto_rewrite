@@ -1,2 +1,2 @@
-# _canprinto_rewrite
+# canprinto_rewrite
 
