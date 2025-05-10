@@ -1,0 +1,66 @@
+{
+    "title": "Sticker Kiss-Cut Freiform",
+    "price_markup": 0.12,
+    "manufacturer": {
+        "name": "WMD",
+        "product_remote_url": "https://www.wir-machen-druck.de/hochwertige-etiketten-auf-rolle-freie-groesse-mit-stanzform.html#content-view"
+    },
+    "properties": {
+        "paper": {
+            "id": "sorten",
+            "name": "sorten",
+            "title": "Material",
+            "css_class": "cpo-paper",
+            "default_values": [],
+            "visible": true
+        },
+        "quantity": {
+            "id": "menge_input",
+            "name": "menge",
+            "title": "Stückzahl",
+            "css_class": "cpo-qty",
+            "default_values": [
+                50
+            ],
+            "visible": true
+        },
+        "height_cm": {
+            "id": "height_cm",
+            "name": "height",
+            "title": "Höhe (cm)",
+            "css_class": "cpo-height",
+            "default_values": [
+                10
+            ],
+            "visible": true
+        },
+        "width_cm": {
+            "id": "width_cm",
+            "name": "width",
+            "title": "Breite (cm)",
+            "css_class": "cpo-width",
+            "default_values": [
+                10
+            ],
+            "visible": true
+        },
+        "Option8": {
+            "id": "option[8]",
+            "name": "option[8]",
+            "title": "Maschineneinrichtung",
+            "css_class": "",
+            "default_values": [
+                1
+            ],
+            "visible": false
+        }
+    },
+    "render_roadmap": {
+        "commands": [
+            "resize 50x50! +repage",
+            "addBleed 3mm",
+            "roundMask 50",
+            "kissCut outline"
+        ]
+    }
+}

@@ -1,6 +1,6 @@
 {
   "name": "canprinto/canprinto",
-  "description": "Canprinto Plugin (rewrite skeleton)",
+  "description": "Canprinto Plugin – Rewrite Skeleton",
   "type": "wordpress-plugin",
   "require": {
     "php": ">=8.1"

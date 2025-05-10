@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canprinto Product Blueprint",
+  "type": "object",
+  "required": ["title", "manufacturer", "properties"],
+  "additionalProperties": false,
+
+  "properties": {
+    "title": { "type": "string" },
+    "price_markup": { "type": "number", "default": 0 },
+
+    "manufacturer": {
+      "type": "object",
+      "required": ["product_remote_url"],
+      "properties": {
+        "name": { "type": "string" },
+        "product_remote_url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": false
+    },
+
+    "properties": {
+      "type": "object",
+      "properties": {
+        "paper":  { "$ref": "#/definitions/optionArray" },
+        "quantity": { "$ref": "#/definitions/optionArray" },
+        "height_mm": { "$ref": "#/definitions/optionArray" },
+        "width_mm":  { "$ref": "#/definitions/optionArray" }
+      },
+      "additionalProperties": true
+    },
+
+    "render_roadmap": { "type": "object" }
+  },
+
+  "definitions": {
+    "optionArray": {
+      "type": "object",
+      "required": ["default_values"],
+      "properties": {
+        "id":        { "type": "string" },
+        "name":      { "type": "string" },
+        "title":     { "type": "string" },
+        "visible":   { "type": "boolean", "default": true },
+        "css_class": { "type": "string" },
+
+        "default_values": {
+          "type": "array",
+          "items": { "type": ["string", "integer"] },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

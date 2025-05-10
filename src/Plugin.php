@@ -7,6 +7,6 @@ final class Plugin
 {
     public function run(): void
     {
-        // Hooks hier registrieren
+        // Hooks werden später registriert
     }
 }
