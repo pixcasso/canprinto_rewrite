@@ -1,12 +1,17 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Canprinto;
 
 final class Plugin
 {
+    use Canprinto\Admin\CptBlueprint;
+    use Canprinto\Admin\BlueprintMetaBox;
+
     public function run(): void
     {
-        // Hooks werden später registriert
+        CptBlueprint::init();
+        BlueprintMetaBox::init();
     }
 }

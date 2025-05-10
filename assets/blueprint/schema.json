@@ -36,7 +36,7 @@
   "definitions": {
     "optionArray": {
       "type": "object",
-      "required": ["default_values"],
+      "required": [],
       "properties": {
         "id":        { "type": "string" },
         "name":      { "type": "string" },
