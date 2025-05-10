@@ -52,4 +52,13 @@ final class Loader
 
         return Blueprint::fromStdClass($data);
     }
+
+    public function fromFileContent(string $json): Blueprint
+    {
+        $tmp = tempnam(sys_get_temp_dir(), 'cpo_bp_');
+        file_put_contents($tmp, $json);
+        $bp = $this->fromFile($tmp);
+        unlink($tmp);
+        return $bp;
+    }
 }

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Canprinto;
 
+use Canprinto\Admin\CptBlueprint;
+use Canprinto\Admin\BlueprintMetaBox;
+
 final class Plugin
 {
-    use Canprinto\Admin\CptBlueprint;
-    use Canprinto\Admin\BlueprintMetaBox;
-
     public function run(): void
     {
         CptBlueprint::init();

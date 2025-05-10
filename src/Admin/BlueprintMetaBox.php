@@ -110,20 +110,4 @@ final class BlueprintMetaBox
     }
 }
 
-/* -------- kleine Hilfs-Methode im Loader ergänzen -------- */
-namespace Canprinto\Blueprint;
 
-final class Loader
-{
-    // … bestehender Code …
-
-    /** Validiert JSON-String direkt (für Metabox) */
-    public function fromFileContent(string $json): Blueprint
-    {
-        $tmp = tempnam(sys_get_temp_dir(), 'cpo_bp_');
-        file_put_contents($tmp, $json);
-        $bp = $this->fromFile($tmp);
-        unlink($tmp);
-        return $bp;
-    }
-}
